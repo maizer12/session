@@ -1,0 +1,155 @@
+.footer {
+	background-color: #6c63ff;
+	padding: 48px 0 25px;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		max-width: 273px;
+		img {
+			width: 100%;
+		}
+	}
+}
+.footer-socials {
+	display: flex;
+	row-gap: 17px;
+	flex-direction: column;
+	&__links {
+		display: flex;
+		column-gap: 41px;
+	}
+
+	&__link {
+		transition: 0.6s;
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__mail {
+		font-family: Raleway;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 1;
+		color: #fff;
+		letter-spacing: 0.17em;
+		text-align: center;
+		transition: 0.6s;
+		&:hover {
+			color: #03214d;
+		}
+	}
+}
+.footer-contacts {
+	&__name {
+		font-family: Raleway;
+		font-size: 28px;
+		font-weight: 400;
+		color: #fff;
+		line-height: 0.7;
+		letter-spacing: 0em;
+		text-align: center;
+		margin-bottom: 23px;
+	}
+
+	&__items {
+		display: flex;
+		align-items: flex-end;
+		column-gap: 5px;
+	}
+
+	&__numbers {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__num {
+		font-family: 'Open Sans', sans-serif;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 1.15;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #fff;
+		transition: 0.6s;
+		&:hover {
+			color: #03214d;
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.footer__container {
+		column-gap: 20px;
+		flex-wrap: wrap;
+		row-gap: 30px;
+	}
+}
+@media (max-width: 768px) {
+	.footer__logo {
+		max-width: 220px;
+	}
+	.footer-socials__link {
+		svg {
+			width: 50px;
+			height: auto;
+		}
+	}
+	.footer-socials__mail {
+		font-size: 14px;
+	}
+	.footer-socials {
+		row-gap: 12px;
+	}
+	.footer-contacts__name {
+		font-size: 18px;
+		text-align: left;
+		margin-bottom: 16px;
+	}
+	.footer-contacts__items {
+		svg {
+			display: none;
+		}
+	}
+	.footer-contacts__num {
+		font-size: 14px;
+	}
+	.footer__container {
+		row-gap: 21px;
+	}
+}
+@media (max-width: 500px) {
+	.footer-socials {
+		order: 2;
+	}
+	.footer__logo {
+		max-width: 134px;
+	}
+	.footer-contacts__name {
+		font-size: 14px;
+		margin-bottom: 14px;
+	}
+	.footer-contacts__num {
+		font-size: 11px;
+	}
+	.footer-socials {
+		margin: 0 auto;
+		display: flex;
+		align-items: center;
+	}
+	.footer-socials__link svg {
+		width: 28px;
+	}
+	.footer-socials__links {
+		column-gap: 20px;
+	}
+	.footer-socials__mail {
+		font-size: 9px;
+	}
+	.footer {
+		padding-top: 23px;
+		padding-bottom: 10px;
+	}
+}

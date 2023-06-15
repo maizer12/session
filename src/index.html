@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/head.html', {
+'title': 'Главная'
+})
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+      <section class="main-banner">
+        <div class="main-banner__container">
+          <div class="main-banner__header">
+            <div class="logo">
+              <img src="./images/logo.svg" alt="logo">
+            </div>
+            <ul class="main-banner-language">
+              <li class="main-banner-language__item active-language">
+                RU
+                <span>|</span>
+              </li>
+              <li class="main-banner-language__item">
+                UA
+                <span>|</span>
+              </li>
+            </ul>
+          </div>
+          <div class="main-banner__inner">
+            <div class="main-banner__content">
+              <h1 class="main-banner__title">Не знаєте, чому відвідувачі залишають ваш сайт без покупки?</h1>
+              <p class="main-banner__sub-title">Наш сервіс покаже, які елементи сайту ускладнюють взаємодію користувача
+              </p>
+              <a class='main-banner__video fancybox' data-fancybox data-type="iframe"
+                href="https://www.youtube.com/embed/ZKKMNy0K0wk">
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M37.9999 27.2682C39.3332 28.038 39.3332 29.9625 37.9999 30.7323L25.9999 37.6605C24.6666 38.4303 22.9999 37.468 22.9999 35.9284V22.072C22.9999 20.5324 24.6666 19.5702 25.9999 20.34L37.9999 27.2682Z"
+                    fill="#6C63FF" />
+                  <circle cx="29.0002" cy="29.0002" r="28.5" stroke="#6C63FF" />
+                </svg>
+                Дивитись відео
+              </a>
+              <a class='main-banner__download' href="./static/Комерційна пропозиція.pdf" download>
+                <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.6351 36.0815C22.2642 36.0815 21.9396 35.9424 21.6614 35.6642C21.3832 35.386 21.2441 35.0615 21.2441 34.6905V31.3754H22.6351V34.6905H34.6903V31.3754H36.0813V34.6905C36.0813 35.0615 35.9422 35.386 35.664 35.6642C35.3858 35.9424 35.0612 36.0815 34.6903 36.0815H22.6351ZM28.6627 32.5345L24.1884 28.0602L25.1852 27.0633L27.9672 29.8453V21.2443H29.3582V29.8453L32.1402 27.0633L33.137 28.0602L28.6627 32.5345Z"
+                    fill="#6C63FF" />
+                  <circle cx="28.9998" cy="29.0002" r="28.5" stroke="#6C63FF" />
+                </svg>
+                Завантажити презентацію
+              </a>
+              <button class="main-banner__open open-close">Спробувати безкоштовно</button>
+            </div>
+            <img src="./images/pc.png" alt="banner img" class="main-banner__img">
+          </div>
+        </div>
+      </section>
+      <section class="we-offer">
+        <div class="we-offer__container">
+          <h2 class="we-offer__title">Ми пропонуємо</h2>
+          <ul class="we-offer__items">
+            <li class="we-offer-item">
+              <p class="we-offer-item__num">1</p>
+              <div class="we-offer-item__content">
+                <h5 class="we-offer-item__name">Можливість бачити як ваші клієнти користуються сайтом </h5>
+                <p class="we-offer-item__desc">
+                  Завдяки SessionSight можливо спостерігати як ваші відвідувачі взаємодіють з сайтом в форматі
+                  відеозапису
+                </p>
+              </div>
+            </li>
+            <li class="we-offer-item">
+              <p class="we-offer-item__num">2</p>
+              <div class="we-offer-item__content">
+                <h5 class="we-offer-item__name">Пошук багів та критичних проблем </h5>
+                <p class="we-offer-item__desc">
+                  Швидке виявлення багів та критичних проблем, які заважають вашим клієнтам робити замовлення, або
+                  робить незручним користування сайтом
+                </p>
+              </div>
+            </li>
+            <li class="we-offer-item">
+              <p class="we-offer-item__num">3</p>
+              <div class="we-offer-item__content">
+                <h5 class="we-offer-item__name">Мультисайтовість</h5>
+                <p class="we-offer-item__desc">
+                  Session sight можливо використовувати одразу на кількох сайтах одночасно.
+                </p>
+              </div>
+            </li>
+            <li class="we-offer-item">
+              <p class="we-offer-item__num">4</p>
+              <div class="we-offer-item__content">
+                <h5 class="we-offer-item__name">Фільтрація по пристроям</h5>
+                <p class="we-offer-item__desc">
+                  Можливість обрати перегляд записів за пристроями (наприклад: дивитись записи лише мобільних юзерів,
+                  або юзерів з планшету, чи тільки пк)
+                </p>
+              </div>
+            </li>
+            <li class="we-offer-item">
+              <p class="we-offer-item__num">5</p>
+              <div class="we-offer-item__content">
+                <h5 class="we-offer-item__name">Поведінка клієнта</h5>
+                <p class="we-offer-item__desc">
+                  Дозволяє візуально простежити весь шлях активності клієнта на сайті, протягом налаштованого вами часу
+                  запису відео.
+                </p>
+              </div>
+            </li>
+            <li class="we-offer-item">
+              <p class="we-offer-item__num">6</p>
+              <div class="we-offer-item__content">
+                <h5 class="we-offer-item__name">Без обмежень</h5>
+                <p class="we-offer-item__desc">
+                  Ви можете створювати необмежену кількість користувачів, та запрошувати нових людей до реєстрації в
+                  системі надаючи їм спеціальний токен-ключ.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="popup">
+        <div class="popup__inner">
+          <button class="popup__close open-close">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M2.4501 27.6501L0.350098 25.5501L11.9001 14.0001L0.350098 2.4501L2.4501 0.350098L14.0001 11.9001L25.5501 0.350098L27.6501 2.4501L16.1001 14.0001L27.6501 25.5501L25.5501 27.6501L14.0001 16.1001L2.4501 27.6501Z"
+                fill="#BEBEBE" />
+            </svg>
+          </button>
+          <div class="popup__content">
+            <input type="text" placeholder='Имя' class="popup__input">
+            <input type="number" placeholder='Номер телефона' class="popup__input">
+            <input type="number" placeholder='Количество посетителей на сайте в месяц' class="popup__input">
+            <input type="email" placeholder='Email' class="popup__input">
+            <button class="popup__btn">Попробовать бесплатно</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {})
+  </div>
+  @@include('html/script.html', {})
+</body>
+
+</html>
