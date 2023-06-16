@@ -1,3 +1,6 @@
+svg {
+	height: fit-content;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	/* display: none; <- Crashes Chrome on hover */
@@ -5,17 +8,16 @@ input::-webkit-inner-spin-button {
 	margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
 }
 .main-banner {
-	background-image: url('../../images/bg.jpg');
+	background-image: url('../images/bg.jpg');
 	padding-bottom: 196px;
-	background-size: cover;
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding-top: 60px;
 	&__header {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		margin-bottom: 103px;
-	}
-	&__container {
-		padding-top: 113px;
 	}
 	&__inner {
 		display: flex;
@@ -86,6 +88,8 @@ input::-webkit-inner-spin-button {
 		border-radius: 40px;
 		transition: 0.6s;
 		display: block;
+		min-height: 73px;
+		min-width: 423px;
 		&:hover {
 			box-shadow: 0px 5px 15px 0px #6c63ff;
 		}
@@ -124,6 +128,10 @@ input::-webkit-inner-spin-button {
 }
 .active-language {
 	color: #6c63ff;
+	font-weight: 700;
+	span {
+		font-weight: 400;
+	}
 }
 
 .logo {
@@ -134,12 +142,6 @@ input::-webkit-inner-spin-button {
 		object-fit: contain;
 	}
 }
-//@media (min-height: 1200px) {
-//	.main-banner {
-///		min-height: 1200px;
-//		height: 100%;
-//}
-//}
 @media (max-width: 1400px) {
 	.main-banner__img {
 		width: 50%;
@@ -156,8 +158,9 @@ input::-webkit-inner-spin-button {
 		font-size: 35px;
 		margin-bottom: 33px;
 	}
-	.main-banner__container {
-		padding-top: 85px;
+	.main-banner {
+		background-size: cover;
+		padding-top: 40px;
 	}
 	.main-banner__open {
 		margin-top: 43px;
@@ -175,6 +178,10 @@ input::-webkit-inner-spin-button {
 	}
 	.main-banner {
 		padding-bottom: 80px;
+	}
+	.main-banner__open {
+		min-width: auto;
+		min-height: auto;
 	}
 }
 @media (max-width: 1024px) {
@@ -194,9 +201,6 @@ input::-webkit-inner-spin-button {
 	}
 }
 @media (max-width: 768px) {
-	.main-banner__container {
-		padding-top: 65px;
-	}
 	.main-banner__title {
 		font-size: 26px;
 		margin-bottom: 23px;
@@ -204,9 +208,6 @@ input::-webkit-inner-spin-button {
 	.main-banner__sub-title {
 		font-size: 18px;
 		margin-bottom: 26px;
-	}
-	.main-banner__container {
-		padding-top: 30px;
 	}
 	.main-banner__download {
 		margin-top: 18px;
@@ -231,7 +232,7 @@ input::-webkit-inner-spin-button {
 @media (max-width: 500px) {
 	.main-banner {
 		padding-top: 29px;
-		background-image: url('../../images/bg-adapt.png');
+		background-image: url('../images/bg-adapt.png');
 		//background-size: contain;
 		background-repeat: no-repeat;
 	}
@@ -240,7 +241,7 @@ input::-webkit-inner-spin-button {
 	}
 	.main-banner__sub-title {
 		font-size: 15px;
-		margin-bottom: 23px;
+		margin-bottom: 38.52px;
 	}
 	.main-banner__video,
 	.main-banner__download {
@@ -333,7 +334,7 @@ input::-webkit-inner-spin-button {
 		letter-spacing: 0em;
 		color: #666666;
 		text-align: left;
-		margin-bottom: 20px;
+		margin-bottom: 8px;
 	}
 
 	&__desc {
@@ -349,7 +350,7 @@ input::-webkit-inner-spin-button {
 .how-it-work {
 	padding-top: 114px;
 	padding-bottom: 153px;
-	background-image: url('../../images/bg-tw.png');
+	background-image: url('../images/bg-tw.png');
 	background-size: cover;
 	&__container {
 	}
@@ -371,10 +372,11 @@ input::-webkit-inner-spin-button {
 	}
 }
 .how-it-work-item {
+	max-width: 370px;
 	&__icon {
 		width: 96px;
 		display: block;
-		margin-bottom: 6px;
+		margin-bottom: 9px;
 	}
 
 	&__name {
@@ -442,6 +444,9 @@ input::-webkit-inner-spin-button {
 		flex-direction: column;
 		row-gap: 25px;
 	}
+	.how-it-work-item {
+		max-width: 100%;
+	}
 	.how-it-work {
 		padding-bottom: 60px;
 	}
@@ -485,7 +490,7 @@ input::-webkit-inner-spin-button {
 		padding-bottom: 0;
 	}
 	.how-it-work {
-		background-image: url('../../images/bg-adap-two.png');
+		background-image: url('../images/bg-adap-two.png');
 		padding-top: 54px;
 	}
 	.how-it-work__title {
@@ -510,6 +515,8 @@ input::-webkit-inner-spin-button {
 	}
 	.how-it-work__title {
 		margin-bottom: 28px;
+	}
+	.main-banner__open {
 	}
 }
 .popup {
@@ -643,5 +650,14 @@ input::-webkit-inner-spin-button {
 		padding: 11px;
 		max-width: 230px;
 		width: 100%;
+	}
+}
+@media (max-width: 500px) {
+	.main-banner__open {
+		margin-top: 29px;
+	}
+	.main-banner__title {
+		font-size: 20px;
+		margin-bottom: 14.48px;
 	}
 }
