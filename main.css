@@ -33,7 +33,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 }
-.menu {
+.menu__inner {
 	gap: 17px;
 	display: flex;
 }
@@ -118,6 +118,9 @@ body {
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
+	row-gap: 45px;
+	column-gap: 15px;
+	flex-wrap: wrap;
 }
 .card {
 	max-width: 280px;
@@ -301,6 +304,27 @@ body {
 .burger-btn {
 	display: none;
 }
+@media (max-width: 1024px) {
+	.services {
+		padding: 60px 0 55px;
+	}
+	.cards {
+		justify-content: space-around;
+	}
+	.title {
+		font-size: 39px;
+	}
+	.services__subtitle {
+		font-size: 15px;
+		margin-bottom: 50px;
+	}
+	.about {
+		padding: 45px 15px 65px;
+	}
+	.about__img {
+		max-width: 100%;
+	}
+}
 @media (max-width: 720px) {
 	.menu {
 		position: fixed;
@@ -313,11 +337,11 @@ body {
 		transition: 0.7s;
 	}
 	.menu__inner {
-		content: '';
-		min-height: 100%;
+		flex-direction: column;
+		display: block;
+		height: 100%;
 		margin-left: auto;
 		padding: 48px 12px 24px;
-		width: 70%;
 		background-color: white;
 	}
 	.menu a {
@@ -372,5 +396,61 @@ body {
 	}
 	.open-menu .menu {
 		transform: translateX(0px);
+	}
+
+	.banner__desc {
+		font-size: 14px;
+	}
+
+	.button {
+		padding: 12px 0;
+		font-size: 14px;
+		min-width: 160px;
+	}
+
+	.contact {
+		padding: 45px 15px 38px;
+	}
+
+	.contact-form {
+		max-width: 470px;
+	}
+}
+@media (max-width: 500px) {
+	.contact-form__title {
+		font-size: 18px;
+	}
+	.contact-form__subtitle {
+		font-size: 16px;
+		margin-bottom: 14px;
+	}
+	.contact-form {
+		padding: 23px 29px 33px;
+	}
+	.contact-form__input::placeholder {
+		font-size: 14px;
+	}
+	.contact-form__input {
+		padding: 10px 14px;
+	}
+	.about__desc {
+		font-size: 14px;
+	}
+	.about__subtitle {
+		font-size: 19px;
+		margin-bottom: 15px;
+		margin-top: 0;
+	}
+	.footer-top__inner {
+		flex-wrap: wrap;
+		gap: 20px;
+	}
+	.socials__link {
+		width: 40px;
+		height: 40px;
+	}
+	.socials__link img {
+		width: 60%;
+		height: auto;
 	}
 }
